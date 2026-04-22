@@ -1,0 +1,149 @@
+{
+  "one-shot": {
+    "results": [
+      {
+        "query": "What is a checking account?",
+        "category": "basic_product",
+        "response_length": 335,
+        "success": true
+      },
+      {
+        "query": "Tell me about savings accounts",
+        "category": "basic_product",
+        "response_length": 548,
+        "success": true
+      },
+      {
+        "query": "What documents do I need to open an account?",
+        "category": "process",
+        "response_length": 374,
+        "success": true
+      },
+      {
+        "query": "Can you give me investment advice?",
+        "category": "out_of_scope",
+        "response_length": 251,
+        "success": true
+      },
+      {
+        "query": "Is my money safe in your bank?",
+        "category": "safety",
+        "response_length": 292,
+        "success": true
+      },
+      {
+        "query": "What are your credit card interest rates?",
+        "category": "rates",
+        "response_length": 254,
+        "success": true
+      }
+    ],
+    "stats": {
+      "strategy": "one-shot",
+      "total_turns": 6,
+      "total_prompt_tokens": 639,
+      "total_completion_tokens": 387,
+      "total_tokens": 1026,
+      "avg_prompt_tokens": 106.5,
+      "avg_completion_tokens": 64.5
+    }
+  },
+  "few-shot": {
+    "results": [
+      {
+        "query": "What is a checking account?",
+        "category": "basic_product",
+        "response_length": 313,
+        "success": true
+      },
+      {
+        "query": "Tell me about savings accounts",
+        "category": "basic_product",
+        "response_length": 262,
+        "success": true
+      },
+      {
+        "query": "What documents do I need to open an account?",
+        "category": "process",
+        "response_length": 302,
+        "success": true
+      },
+      {
+        "query": "Can you give me investment advice?",
+        "category": "out_of_scope",
+        "response_length": 211,
+        "success": true
+      },
+      {
+        "query": "Is my money safe in your bank?",
+        "category": "safety",
+        "response_length": 267,
+        "success": true
+      },
+      {
+        "query": "What are your credit card interest rates?",
+        "category": "rates",
+        "response_length": 215,
+        "success": true
+      }
+    ],
+    "stats": {
+      "strategy": "few-shot",
+      "total_turns": 6,
+      "total_prompt_tokens": 1011,
+      "total_completion_tokens": 303,
+      "total_tokens": 1314,
+      "avg_prompt_tokens": 168.5,
+      "avg_completion_tokens": 50.5
+    }
+  },
+  "chain-of-thought": {
+    "results": [
+      {
+        "query": "What is a checking account?",
+        "category": "basic_product",
+        "response_length": 693,
+        "success": true
+      },
+      {
+        "query": "Tell me about savings accounts",
+        "category": "basic_product",
+        "response_length": 781,
+        "success": true
+      },
+      {
+        "query": "What documents do I need to open an account?",
+        "category": "process",
+        "response_length": 735,
+        "success": true
+      },
+      {
+        "query": "Can you give me investment advice?",
+        "category": "out_of_scope",
+        "response_length": 596,
+        "success": true
+      },
+      {
+        "query": "Is my money safe in your bank?",
+        "category": "safety",
+        "response_length": 671,
+        "success": true
+      },
+      {
+        "query": "What are your credit card interest rates?",
+        "category": "rates",
+        "response_length": 667,
+        "success": true
+      }
+    ],
+    "stats": {
+      "strategy": "chain-of-thought",
+      "total_turns": 6,
+      "total_prompt_tokens": 1113,
+      "total_completion_tokens": 852,
+      "total_tokens": 1965,
+      "avg_prompt_tokens": 185.5,
+      "avg_completion_tokens": 142.0
+    }
+  }
+}

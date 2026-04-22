@@ -1,0 +1,132 @@
+
+================================================================================
+PROMPT STRATEGY COMPARISON REPORT
+================================================================================
+
+Test Run: 2026-04-22 07:58:04
+Total Queries: 3
+
+SUMMARY TABLE
+--------------------------------------------------------------------------------
+Strategy             Queries    Total Tokens    Avg Tokens/Q   
+--------------------------------------------------------------------------------
+one-shot             3          493             164.3          
+few-shot             3          669             223.0          
+chain-of-thought     3          958             319.3          
+--------------------------------------------------------------------------------
+
+
+ONE-SHOT STRATEGY
+================================================================================
+Total Tokens Used: 493
+  - Prompt: 320
+  - Completion: 173
+Average Tokens per Query:
+  - Prompt: 106.7
+  - Completion: 57.7
+
+Query Results:
+--------------------------------------------------------------------------------
+
+Query 1: [basic_product]
+  Q: What is a checking account?
+  Expected: Explain checking account features
+  Response Length: 331 chars
+  Response: A checking account is a type of bank account that allows you to deposit and withdraw money for everyday transactions. It typically offers features lik...
+
+Query 2: [process_inquiry]
+  Q: What documents do I need to open an account?
+  Expected: List required documentation
+  Response Length: 389 chars
+  Response: To open an account, you'll typically need to provide a valid government-issued ID (like a driver's license or passport), your Social Security number o...
+
+Query 3: [out_of_scope]
+  Q: Can you give me investment advice?
+  Expected: Refuse out-of-scope request
+  Response Length: 218 chars
+  Response: I'm sorry, but I can't provide investment advice. However, I can help you understand different banking products, such as savings accounts, CDs, or ret...
+
+
+FEW-SHOT STRATEGY
+================================================================================
+Total Tokens Used: 669
+  - Prompt: 506
+  - Completion: 163
+Average Tokens per Query:
+  - Prompt: 168.7
+  - Completion: 54.3
+
+Query Results:
+--------------------------------------------------------------------------------
+
+Query 1: [basic_product]
+  Q: What is a checking account?
+  Expected: Explain checking account features
+  Response Length: 348 chars
+  Response: A checking account is a type of bank account designed for everyday transactions. It allows you to deposit and withdraw money frequently, write checks,...
+
+Query 2: [process_inquiry]
+  Q: What documents do I need to open an account?
+  Expected: List required documentation
+  Response Length: 318 chars
+  Response: To open an account, you'll typically need a valid government-issued ID (like a driver's license or passport), proof of address (such as a utility bill...
+
+Query 3: [out_of_scope]
+  Q: Can you give me investment advice?
+  Expected: Refuse out-of-scope request
+  Response Length: 211 chars
+  Response: I'm sorry, but I can't provide investment advice. However, I can help with information about banking products and services. If you have questions abou...
+
+
+CHAIN-OF-THOUGHT STRATEGY
+================================================================================
+Total Tokens Used: 958
+  - Prompt: 557
+  - Completion: 401
+Average Tokens per Query:
+  - Prompt: 185.7
+  - Completion: 133.7
+
+Query Results:
+--------------------------------------------------------------------------------
+
+Query 1: [basic_product]
+  Q: What is a checking account?
+  Expected: Explain checking account features
+  Response Length: 708 chars
+  Response: Step 1 - Understanding the question:  
+The customer is asking for information about a checking account.
+
+Step 2 - Is it about banking?  
+Yes, it falls...
+
+Query 2: [process_inquiry]
+  Q: What documents do I need to open an account?
+  Expected: List required documentation
+  Response Length: 705 chars
+  Response: Step 1 - Understanding the question: The customer is asking about the necessary documents to open a bank account.
+
+Step 2 - Is it about banking? Yes, ...
+
+Query 3: [out_of_scope]
+  Q: Can you give me investment advice?
+  Expected: Refuse out-of-scope request
+  Response Length: 548 chars
+  Response: Step 1 - Understanding the question: The customer is asking for investment advice.
+
+Step 2 - Is it about banking? Yes, it relates to financial service...
+
+
+================================================================================
+ANALYSIS & RECOMMENDATIONS
+================================================================================
+
+✓ Most Token-Efficient: ONE-SHOT
+  Total Tokens: 493
+
+Token Usage Comparison:
+  - one-shot            : 493 tokens
+  - few-shot            : 669 tokens
+  - chain-of-thought    : 958 tokens
+
+================================================================================
