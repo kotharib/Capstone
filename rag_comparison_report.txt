@@ -1,0 +1,100 @@
+
+================================================================================
+RAG COMPARISON REPORT
+================================================================================
+
+Test Run: 2026-04-22 12:13:16
+Total Queries: 5
+
+SUMMARY COMPARISON
+--------------------------------------------------------------------------------
+Metric                         LLM-Only             RAG-Enhanced         Improvement
+--------------------------------------------------------------------------------
+Avg Keyword Coverage           76.7%                86.7%                +13.0%
+Avg Response Length            318                  527                  +65.7%
+Avg Tokens per Query           0.0                  447.2                +0.0%
+--------------------------------------------------------------------------------
+
+DETAILED RESULTS
+================================================================================
+
+WITHOUT RAG (LLM-Only)
+--------------------------------------------------------------------------------
+Query 1: What documents do I need to open a bank account?
+  Keywords: 3/3
+  Response: To open a bank account, you'll typically need a valid government-issued ID (like a driver's license ...
+
+Query 2: How is my money protected at your bank?
+  Keywords: 1/3
+  Response: A: Your money is protected through FDIC insurance, which covers deposits up to $250,000 per deposito...
+
+Query 3: What are the fees for checking accounts?
+  Keywords: 3/3
+  Response: A: Fees for checking accounts can vary by bank and account type. Common fees include monthly mainten...
+
+Query 4: What is overdraft protection and how does it work?
+  Keywords: 3/4
+  Response: Overdraft protection is a service that allows you to complete transactions even if you don't have en...
+
+Query 5: Can I get a personal loan and what are the rates?
+  Keywords: 3/4
+  Response: Yes, you can apply for a personal loan. Rates vary based on your credit score, loan amount, and term...
+
+
+WITH RAG (RAG-Enhanced)
+--------------------------------------------------------------------------------
+Query 1: What documents do I need to open a bank account?
+  Keywords: 3/3
+  Retrieved Docs: 3
+  Response: To open a bank account, you need the following documents:
+
+1. A government-issued photo ID (such as ...
+
+Query 2: How is my money protected at your bank?
+  Keywords: 1/3
+  Retrieved Docs: 3
+  Response: Your money is protected at our bank through FDIC Insurance. In the event of a bank failure, the FDIC...
+
+Query 3: What are the fees for checking accounts?
+  Keywords: 3/3
+  Retrieved Docs: 3
+  Response: Checking accounts may incur the following fees:
+
+1. **Monthly Maintenance Fees**: $5-$15 per month, ...
+
+Query 4: What is overdraft protection and how does it work?
+  Keywords: 4/4
+  Retrieved Docs: 3
+  Response: Overdraft Protection is a service that prevents your debit card or check transactions from being dec...
+
+Query 5: Can I get a personal loan and what are the rates?
+  Keywords: 4/4
+  Retrieved Docs: 3
+  Response: Yes, you can get a personal loan. The typical loan amount ranges from $500 to $100,000, with a repay...
+
+
+================================================================================
+ANALYSIS & INSIGHTS
+================================================================================
+
+Key Findings:
+✓ Response Completeness:
+  - LLM-Only: 40.0% of queries contained all expected keywords
+  - RAG-Enhanced: 80.0% of queries contained all expected keywords
+  - Improvement: 40.0%
+
+✓ Context Awareness:
+  - RAG system retrieved an average of 3.0 documents per query
+  - Average retrieval time: 319.0ms
+
+✓ Token Efficiency:
+  - LLM-Only average: 0.0 tokens
+  - RAG-Enhanced average: 447.2 tokens
+  - Trade-off: +447.2 tokens for improved accuracy
+
+✓ Missing Context Scenarios:
+  - Queries missing context: LLM-Only (3), RAG-Enhanced (1)
+  - Reduction: 2 fewer incomplete responses with RAG
+
+
+================================================================================

@@ -1,0 +1,43 @@
+2026-04-22 12:13:17 - INFO - RAGAgent initialized - Strategy: few-shot, RAG: False
+2026-04-22 12:13:17 - INFO - [Turn 1] User Input: What documents do I need to open a bank account?
+2026-04-22 12:13:20 - INFO - [Turn 1] Response (without RAG): To open a bank account, you'll typically need a valid government-issued ID (like a driver's license ...
+2026-04-22 12:13:20 - INFO - [Turn 2] User Input: How is my money protected at your bank?
+2026-04-22 12:13:22 - INFO - [Turn 2] Response (without RAG): A: Your money is protected through FDIC insurance, which covers deposits up to $250,000 per deposito...
+2026-04-22 12:13:22 - INFO - [Turn 3] User Input: What are the fees for checking accounts?
+2026-04-22 12:13:24 - INFO - [Turn 3] Response (without RAG): A: Fees for checking accounts can vary by bank and account type. Common fees include monthly mainten...
+2026-04-22 12:13:24 - INFO - [Turn 4] User Input: What is overdraft protection and how does it work?
+2026-04-22 12:13:26 - INFO - [Turn 4] Response (without RAG): Overdraft protection is a service that allows you to complete transactions even if you don't have en...
+2026-04-22 12:13:26 - INFO - [Turn 5] User Input: Can I get a personal loan and what are the rates?
+2026-04-22 12:13:28 - INFO - [Turn 5] Response (without RAG): Yes, you can apply for a personal loan. Rates vary based on your credit score, loan amount, and term...
+2026-04-22 12:13:28 - INFO - Initializing RAG system...
+2026-04-22 12:13:44 - INFO - RAG system ready with 23 document chunks
+2026-04-22 12:13:44 - INFO - RAGAgent initialized - Strategy: few-shot, RAG: True
+2026-04-22 12:13:44 - INFO - [Turn 1] User Input: What documents do I need to open a bank account?
+2026-04-22 12:13:45 - INFO - Retrieved 3 documents for context
+2026-04-22 12:13:45 - INFO - [Turn 1] Retrieved 3 documents
+2026-04-22 12:13:47 - INFO - [Turn 1] Response (with RAG): To open a bank account, you need the following documents:
+
+1. A government-issued photo ID (such as ...
+2026-04-22 12:13:47 - INFO - [Turn 1] Tokens - Prompt: 350, Completion: 94
+2026-04-22 12:13:47 - INFO - [Turn 2] User Input: How is my money protected at your bank?
+2026-04-22 12:13:48 - INFO - Retrieved 3 documents for context
+2026-04-22 12:13:48 - INFO - [Turn 2] Retrieved 3 documents
+2026-04-22 12:13:50 - INFO - [Turn 2] Response (with RAG): Your money is protected at our bank through FDIC Insurance. In the event of a bank failure, the FDIC...
+2026-04-22 12:13:50 - INFO - [Turn 2] Tokens - Prompt: 260, Completion: 110
+2026-04-22 12:13:50 - INFO - [Turn 3] User Input: What are the fees for checking accounts?
+2026-04-22 12:13:51 - INFO - Retrieved 3 documents for context
+2026-04-22 12:13:51 - INFO - [Turn 3] Retrieved 3 documents
+2026-04-22 12:13:53 - INFO - [Turn 3] Response (with RAG): Checking accounts may incur the following fees:
+
+1. **Monthly Maintenance Fees**: $5-$15 per month, ...
+2026-04-22 12:13:53 - INFO - [Turn 3] Tokens - Prompt: 360, Completion: 130
+2026-04-22 12:13:53 - INFO - [Turn 4] User Input: What is overdraft protection and how does it work?
+2026-04-22 12:13:54 - INFO - Retrieved 3 documents for context
+2026-04-22 12:13:54 - INFO - [Turn 4] Retrieved 3 documents
+2026-04-22 12:13:57 - INFO - [Turn 4] Response (with RAG): Overdraft Protection is a service that prevents your debit card or check transactions from being dec...
+2026-04-22 12:13:57 - INFO - [Turn 4] Tokens - Prompt: 304, Completion: 171
+2026-04-22 12:13:57 - INFO - [Turn 5] User Input: Can I get a personal loan and what are the rates?
+2026-04-22 12:13:58 - INFO - Retrieved 3 documents for context
+2026-04-22 12:13:58 - INFO - [Turn 5] Retrieved 3 documents
+2026-04-22 12:14:00 - INFO - [Turn 5] Response (with RAG): Yes, you can get a personal loan. The typical loan amount ranges from $500 to $100,000, with a repay...
+2026-04-22 12:14:00 - INFO - [Turn 5] Tokens - Prompt: 376, Completion: 81

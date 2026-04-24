@@ -47,6 +47,12 @@ class Config:
     LLM_TIMEOUT = int(os.getenv("LLM_TIMEOUT", "30"))
     LLM_LOG_FILE = os.getenv("LLM_LOG_FILE", "llm_interactions.log")
 
+    # Memory & feedback
+    MEMORY_WINDOW_SIZE = int(os.getenv("MEMORY_WINDOW_SIZE", "3"))
+    FEEDBACK_LOG_FILE = os.getenv("FEEDBACK_LOG_FILE", "feedback_log.json")
+    SERVICE_LOG_FILE = os.getenv("SERVICE_LOG_FILE", "agent_service.log")
+    EVALUATION_RESULTS_FILE = os.getenv("EVALUATION_RESULTS_FILE", "evaluation_results.json")
+
     @classmethod
     def validate(cls):
         """Validate configuration"""
@@ -73,8 +79,12 @@ class Config:
         print(f"Debug: {cls.DEBUG}")
         print(f"Log File: {cls.LOG_FILE}")
         print(f"Context Memory: {cls.ENABLE_CONTEXT_MEMORY}")
+        print(f"Memory Window: {cls.MEMORY_WINDOW_SIZE}")
         print(f"Max Input Length: {cls.MAX_INPUT_LENGTH}")
         print(f"Max Turns: {cls.MAX_CONVERSATION_TURNS}")
+        print(f"Feedback Log: {cls.FEEDBACK_LOG_FILE}")
+        print(f"Service Log: {cls.SERVICE_LOG_FILE}")
+        print(f"Evaluation Results: {cls.EVALUATION_RESULTS_FILE}")
         print(f"Confidence Threshold: {cls.CONFIDENCE_THRESHOLD}")
         print("=" * 20 + "\n")
 

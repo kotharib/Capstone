@@ -1,0 +1,272 @@
+{
+  "without_rag": {
+    "queries": [
+      {
+        "query_num": 1,
+        "category": "process_inquiry",
+        "query": "What documents do I need to open a bank account?",
+        "response": "To open a bank account, you'll typically need a valid government-issued ID (like a driver's license or passport), proof of address (such as a utility bill or lease agreement), and your Social Security number. Some banks may also require an initial deposit. The process is usually quick and can often ...",
+        "response_length": 333,
+        "evaluation": {
+          "response_length": 333,
+          "keywords_found": 3,
+          "total_keywords": 3,
+          "keyword_coverage": 1.0,
+          "contains_all_keywords": true
+        },
+        "metadata": {
+          "tokens": 0,
+          "retrieved_docs": 0,
+          "retrieval_time": 0
+        }
+      },
+      {
+        "query_num": 2,
+        "category": "safety_inquiry",
+        "query": "How is my money protected at your bank?",
+        "response": "A: Your money is protected through FDIC insurance, which covers deposits up to $250,000 per depositor, per bank. Additionally, we implement advanced security measures, including encryption and fraud monitoring, to safeguard your account information and transactions. Your peace of mind is our priorit...",
+        "response_length": 302,
+        "evaluation": {
+          "response_length": 302,
+          "keywords_found": 1,
+          "total_keywords": 3,
+          "keyword_coverage": 0.3333333333333333,
+          "contains_all_keywords": false
+        },
+        "metadata": {
+          "tokens": 0,
+          "retrieved_docs": 0,
+          "retrieval_time": 0
+        }
+      },
+      {
+        "query_num": 3,
+        "category": "fee_inquiry",
+        "query": "What are the fees for checking accounts?",
+        "response": "A: Fees for checking accounts can vary by bank and account type. Common fees include monthly maintenance fees, overdraft fees, and ATM fees. Some accounts may waive the monthly fee if you maintain a minimum balance or set up direct deposit. Always check the specific terms and conditions of your acco...",
+        "response_length": 333,
+        "evaluation": {
+          "response_length": 333,
+          "keywords_found": 3,
+          "total_keywords": 3,
+          "keyword_coverage": 1.0,
+          "contains_all_keywords": true
+        },
+        "metadata": {
+          "tokens": 0,
+          "retrieved_docs": 0,
+          "retrieval_time": 0
+        }
+      },
+      {
+        "query_num": 4,
+        "category": "product_feature",
+        "query": "What is overdraft protection and how does it work?",
+        "response": "Overdraft protection is a service that allows you to complete transactions even if you don't have enough funds in your checking account. If you overdraw your account, the bank will cover the difference, up to a certain limit. This can help avoid declined transactions or bounced checks. However, fees...",
+        "response_length": 392,
+        "evaluation": {
+          "response_length": 392,
+          "keywords_found": 3,
+          "total_keywords": 4,
+          "keyword_coverage": 0.75,
+          "contains_all_keywords": false
+        },
+        "metadata": {
+          "tokens": 0,
+          "retrieved_docs": 0,
+          "retrieval_time": 0
+        }
+      },
+      {
+        "query_num": 5,
+        "category": "loan_inquiry",
+        "query": "Can I get a personal loan and what are the rates?",
+        "response": "Yes, you can apply for a personal loan. Rates vary based on your credit score, loan amount, and term length. Typically, rates range from 5% to 36%. It's best to check with your bank for specific offers and eligibility requirements.",
+        "response_length": 231,
+        "evaluation": {
+          "response_length": 231,
+          "keywords_found": 3,
+          "total_keywords": 4,
+          "keyword_coverage": 0.75,
+          "contains_all_keywords": false
+        },
+        "metadata": {
+          "tokens": 0,
+          "retrieved_docs": 0,
+          "retrieval_time": 0
+        }
+      }
+    ],
+    "stats": null
+  },
+  "with_rag": {
+    "queries": [
+      {
+        "query_num": 1,
+        "category": "process_inquiry",
+        "query": "What documents do I need to open a bank account?",
+        "response": "To open a bank account, you need the following documents:\n\n1. A government-issued photo ID (such as a driver's license, passport, or national ID).\n2. Your Social Security Number (SSN) or Individual Taxpayer Identification Number (ITIN).\n3. Proof of address (like a utility bill, lease agreement, or r...",
+        "response_length": 428,
+        "evaluation": {
+          "response_length": 428,
+          "keywords_found": 3,
+          "total_keywords": 3,
+          "keyword_coverage": 1.0,
+          "contains_all_keywords": true
+        },
+        "metadata": {
+          "tokens": 444,
+          "retrieved_docs": 3,
+          "retrieval_time": 0.501934289932251
+        },
+        "retrieved_context": [
+          {
+            "source": "opening_account",
+            "similarity": 0.6583666524886367
+          },
+          {
+            "source": "account_types",
+            "similarity": 0.48252595186560016
+          },
+          {
+            "source": "security_fraud",
+            "similarity": 0.472645537426582
+          }
+        ]
+      },
+      {
+        "query_num": 2,
+        "category": "safety_inquiry",
+        "query": "How is my money protected at your bank?",
+        "response": "Your money is protected at our bank through FDIC Insurance. In the event of a bank failure, the FDIC takes control of the bank's assets and ensures that deposits within the coverage limit are protected. Typically, your funds will be available within 1-5 business days, and no action is required from ...",
+        "response_length": 551,
+        "evaluation": {
+          "response_length": 551,
+          "keywords_found": 1,
+          "total_keywords": 3,
+          "keyword_coverage": 0.3333333333333333,
+          "contains_all_keywords": false
+        },
+        "metadata": {
+          "tokens": 370,
+          "retrieved_docs": 3,
+          "retrieval_time": 0.23728466033935547
+        },
+        "retrieved_context": [
+          {
+            "source": "fdic_insurance",
+            "similarity": 0.5360890282965856
+          },
+          {
+            "source": "overdraft_protection",
+            "similarity": 0.49484573057779846
+          },
+          {
+            "source": "fdic_insurance",
+            "similarity": 0.4864443052071805
+          }
+        ]
+      },
+      {
+        "query_num": 3,
+        "category": "fee_inquiry",
+        "query": "What are the fees for checking accounts?",
+        "response": "Checking accounts may incur the following fees:\n\n1. **Monthly Maintenance Fees**: $5-$15 per month, which can be waived if a minimum balance is maintained.\n2. **Per-Check Fees**: May apply depending on the account terms.\n3. **Overdraft Fees**: $25-$35 per transaction if the account balance is insuff...",
+        "response_length": 548,
+        "evaluation": {
+          "response_length": 548,
+          "keywords_found": 3,
+          "total_keywords": 3,
+          "keyword_coverage": 1.0,
+          "contains_all_keywords": true
+        },
+        "metadata": {
+          "tokens": 490,
+          "retrieved_docs": 3,
+          "retrieval_time": 0.2635068893432617
+        },
+        "retrieved_context": [
+          {
+            "source": "fees_and_charges",
+            "similarity": 0.5935811833967818
+          },
+          {
+            "source": "account_types",
+            "similarity": 0.5856724789353319
+          },
+          {
+            "source": "overdraft_protection",
+            "similarity": 0.5277927749349068
+          }
+        ]
+      },
+      {
+        "query_num": 4,
+        "category": "product_feature",
+        "query": "What is overdraft protection and how does it work?",
+        "response": "Overdraft Protection is a service that prevents your debit card or check transactions from being declined when you attempt to spend more than your available balance. It connects to a linked account, such as a savings account or a credit line, to cover any shortfalls. \n\nHere's how it works: \n\n1. You ...",
+        "response_length": 780,
+        "evaluation": {
+          "response_length": 780,
+          "keywords_found": 4,
+          "total_keywords": 4,
+          "keyword_coverage": 1.0,
+          "contains_all_keywords": true
+        },
+        "metadata": {
+          "tokens": 475,
+          "retrieved_docs": 3,
+          "retrieval_time": 0.2403719425201416
+        },
+        "retrieved_context": [
+          {
+            "source": "overdraft_protection",
+            "similarity": 0.6726940917192973
+          },
+          {
+            "source": "overdraft_protection",
+            "similarity": 0.48969096598493955
+          },
+          {
+            "source": "overdraft_protection",
+            "similarity": 0.4612082836196772
+          }
+        ]
+      },
+      {
+        "query_num": 5,
+        "category": "loan_inquiry",
+        "query": "Can I get a personal loan and what are the rates?",
+        "response": "Yes, you can get a personal loan. The typical loan amount ranges from $500 to $100,000, with a repayment term of 2 to 7 years. Interest rates vary based on your credit score, ranging from 5% to 36% APR. To qualify, you'll need to undergo a credit check and provide income verification. Approval usual...",
+        "response_length": 330,
+        "evaluation": {
+          "response_length": 330,
+          "keywords_found": 4,
+          "total_keywords": 4,
+          "keyword_coverage": 1.0,
+          "contains_all_keywords": true
+        },
+        "metadata": {
+          "tokens": 457,
+          "retrieved_docs": 3,
+          "retrieval_time": 0.3519270420074463
+        },
+        "retrieved_context": [
+          {
+            "source": "loans_borrowing",
+            "similarity": 0.5537933846820418
+          },
+          {
+            "source": "interest_rates",
+            "similarity": 0.47641788793382517
+          },
+          {
+            "source": "account_types",
+            "similarity": 0.44077793663829773
+          }
+        ]
+      }
+    ],
+    "stats": null
+  }
+}

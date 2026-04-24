@@ -14,3 +14,13 @@
 2026-04-19 19:40:14,364 - INFO - [Turn 5] User Input: What is the legal framework for banking?
 2026-04-19 19:40:14,364 - INFO - [Turn 5] Intent Detected: unknown (keyword: )
 2026-04-19 19:40:14,364 - INFO - [Turn 5] Response: I'm not sure how to answer that. Please contact customer support.
+2026-04-24 20:03:46,516 - INFO - BaselineAgent initialized
+2026-04-24 20:04:29,437 - INFO - [Turn 1] User Input: What are your savings account rates?
+2026-04-24 20:04:29,446 - INFO - [Turn 1] Intent Detected: product_inquiry (keyword: savings account)
+2026-04-24 20:04:29,452 - INFO - [Turn 1] Response: Our savings account offers: 0.45% APY, no minimum balance required.
+2026-04-24 20:04:37,709 - INFO - [Turn 2] User Input: What is my account balance?
+2026-04-24 20:04:37,717 - INFO - [Turn 2] Intent Detected: unknown (keyword: )
+2026-04-24 20:04:37,720 - INFO - [Turn 2] Response: I'm not sure how to answer that. Please contact customer support.
+2026-04-24 20:04:45,942 - INFO - [Turn 3] User Input: What fees do you charge?
+2026-04-24 20:04:45,943 - INFO - [Turn 3] Intent Detected: unknown (keyword: )
+2026-04-24 20:04:45,948 - INFO - [Turn 3] Response: I'm not sure how to answer that. Please contact customer support.
